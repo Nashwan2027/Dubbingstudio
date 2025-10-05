@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- رأس البطاقة مع عداد ومؤشر المزامنة -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvCardCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                tools:text="1 / 5"
+                android:textStyle="bold" />
+
+            <!-- مؤشر المزامنة الذكية -->
+            <ImageView
+                android:id="@+id/ivSyncWarning"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:layout_toStartOf="@+id/tvTiming"
+                android:layout_marginEnd="8dp"
+                android:src="@android:drawable/ic_dialog_alert"
+                android:contentDescription="تحذير المزامنة"
+                android:layout_centerVertical="true"
+                android:tint="@color/blue" />
+
+            <TextView
+                android:id="@+id/tvTiming"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/blue"
+                tools:text="00:00:00 - 00:00:03" />
+
+        </RelativeLayout>
+
+        <!-- حقل نص المحادثة -->
+        <EditText
+            android:id="@+id/etDialogueText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginTop="8dp"
+            tools:text="هذا مثال على نص عربي لغرض الاختبار"
+            android:gravity="top|start"
+            android:background="@drawable/edit_text_background"
+            android:hint="اكتب نص المقطع هنا. سيتم حفظ التعديلات تلقائياً."
+            android:textAlignment="viewStart"
+            android:minHeight="150dp"
+            android:textDirection="locale"
+            android:longClickable="true"
+            android:cursorVisible="true"
+            android:inputType="textMultiLine|textCapSentences" />
+
+        <!-- أزرار نوع الصوت المحسنة -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <ImageButton
+                android:id="@+id/btn_voice_child"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:src="@drawable/voice_child"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="صوت طفل" />
+
+            <ImageButton
+                android:id="@+id/btn_voice_boy"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:src="@drawable/voice_boy"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="صوت ولد" />
+
+            <ImageButton
+                android:id="@+id/btn_voice_young"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:src="@drawable/voice_young"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="صوت شاب" />
+
+            <ImageButton
+                android:id="@+id/btn_voice_man"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:src="@drawable/voice_man"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="صوت رجل" />
+
+        </LinearLayout>
+
+        <!-- أدوات التحكم بالصوت -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageButton
+                android:id="@+id/btnPlaySegment"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_media_play"
+                android:contentDescription="تشغيل المقطع"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <!-- مؤشر تقدم المزامنة الذكية -->
+            <ProgressBar
+                android:id="@+id/syncProgress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:indeterminateTint="@color/blue"
+                android:layout_marginStart="8dp" />
+
+            <ImageButton
+                android:id="@+id/btnPreview"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:visibility="gone"
+                android:src="@android:drawable/ic_media_next"
+                android:contentDescription="معاينة بعد المزامنة"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/blue"
+                android:layout_marginStart="8dp" />
+
+            <ImageButton
+                android:id="@+id/btnAutoSync"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@android:drawable/ic_menu_rotate"
+                android:contentDescription="مزامنة تلقائية للسرعة"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/blue"
+                android:layout_marginStart="8dp" />
+
+            <!-- محدد الصوت المحسن -->
+            <Spinner
+                android:id="@+id/spinnerVoiceSelector"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <!-- عناصر التحكم بالسرعة وحدة الصوت -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="سرعة القراءة" />
+
+                <TextView
+                    android:id="@+id/tvSpeedValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    tools:text="1.00x" />
+
+            </RelativeLayout>
+
+            <SeekBar
+                android:id="@+id/seekbarSpeed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="250"
+                android:progressTint="@color/blue"
+                android:progress="100" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:text="طبقة الصوت" />
+
+                <TextView
+                    android:id="@+id/tvPitchValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    tools:text="1.0" />
+
+            </RelativeLayout>
+
+            <SeekBar
+                android:id="@+id/seekbarPitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="200"
+                android:progressTint="@color/blue"
+                android:progress="100" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- الأذونات الأساسية -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <!-- أذونات للوصول إلى معلومات الحزم -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+
+    <!-- دعم محركات TTS الخارجية -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+        <package android:name="es.codefactory.vocalizertts" />
+        <package android:name="com.google.android.tts" />
+        <package android:name="com.samsung.SMT" />
+        <package android:name="com.ivona.tts" />
+        <package android:name="com.svox.pico" />
+        <package android:name="org.nobody.multitts" />
+        <package android:name="com.speechtools" />
+        <package android:name="com.acapelatvoices" />
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Dubbingstudio"
+        tools:targetApi="31">
+
+        <!-- النشاط الرئيسي -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Dubbingstudio">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- نشاط استوديو الدبلجة -->
+        <activity
+            android:name=".ui.studio.DubbingStudioActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Dubbingstudio" />
+
+        <!-- نشاط إعدادات التطبيق -->
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Dubbingstudio" />
+
+        <!-- نشاط استيراد ملفات SRT -->
+        <activity
+            android:name=".ui.srtimport.SrtImportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Dubbingstudio" />
+
+        <!-- نشاط كتابة النص -->
+        <activity
+            android:name=".ui.writescript.WriteScriptActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Dubbingstudio" />
+
+        <!-- خدمة تصدير الصوت -->
+        <service
+            android:name=".services.AudioExportService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- مزود ملفات -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.nash.dubbingstudio.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- دعم Text-to-Speech -->
+        <meta-data
+            android:name="android.speech.tts.DEFAULT_ENGINE"
+            android:value="com.google.android.tts" />
+
+    </application>
+
+</manifest>

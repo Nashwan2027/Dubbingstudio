@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- محركات الصوت -->
+    <string-array name="voice_engines">
+        <item>Google Text-to-Speech</item>
+        <item>Samsung SMT</item>
+        <item>Vocalizer TTS</item>
+        <item>MultiTTS</item>
+        <item>محرك النظام الافتراضي</item>
+    </string-array>
+
+    <string-array name="voice_engine_values">
+        <item>google_tts</item>
+        <item>samsung_smt</item>
+        <item>vocalizer_tts</item>
+        <item>multitts</item>
+        <item>system_default</item>
+    </string-array>
+
+    <!-- خيارات السرعة -->
+    <string-array name="speed_options">
+        <item>بطيء جداً (0.5x)</item>
+        <item>بطيء (0.75x)</item>
+        <item>عادي (1.0x)</item>
+        <item>سريع (1.25x)</item>
+        <item>سريع جداً (1.5x)</item>
+    </string-array>
+
+    <string-array name="speed_values">
+        <item>0.5</item>
+        <item>0.75</item>
+        <item>1.0</item>
+        <item>1.25</item>
+        <item>1.5</item>
+    </string-array>
+
+    <!-- صيغ التصدير -->
+    <string-array name="export_formats">
+        <item>MP3</item>
+        <item>WAV</item>
+        <item>M4A</item>
+        <item>AAC</item>
+    </string-array>
+
+    <string-array name="export_format_values">
+        <item>mp3</item>
+        <item>wav</item>
+        <item>m4a</item>
+        <item>aac</item>
+    </string-array>
+
+    <!-- جودة الصوت -->
+    <string-array name="quality_options">
+        <item>منخفضة (128 kbps)</item>
+        <item>متوسطة (192 kbps)</item>
+        <item>عالية (256 kbps)</item>
+        <item>فائقة (320 kbps)</item>
+    </string-array>
+
+    <string-array name="quality_values">
+        <item>128</item>
+        <item>192</item>
+        <item>256</item>
+        <item>320</item>
+    </string-array>
+
+    <!-- اللغات المدعومة -->
+    <string-array name="supported_languages">
+        <item>العربية</item>
+        <item>English</item>
+        <item>Français</item>
+        <item>Español</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>ar</item>
+        <item>en</item>
+        <item>fr</item>
+        <item>es</item>
+    </string-array>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- الهوامش العامة -->
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="fab_main_margin">16dp</dimen>
+    
+    <!-- أبعاد الزوايا -->
+    <dimen name="card_corner_radius">16dp</dimen>
+    
+    <!-- أبعاد الأزرار العائمة -->
+    <dimen name="fab_main_size">65dp</dimen>
+    <dimen name="fab_sub_size">55dp</dimen>
+    <dimen name="fab_sub_distance">70dp</dimen>
+    <dimen name="fab_distance_1">80dp</dimen>
+    <dimen name="fab_distance_2">120dp</dimen>
+    <dimen name="fab_distance_3">80dp</dimen>
+    <!-- الأبعاد الحالية... -->
+    
+    <!-- أبعاد Speed Dial المحسّنة -->
+    <dimen name="fab_popup_distance_x">120dp</dimen>
+    <dimen name="fab_popup_distance_y">120dp</dimen>
+    <dimen name="fab_popup_distance_diagonal">85dp</dimen> <!-- 120 * 0.7 -->
+    
+    <!-- أبعاد التنقل -->
+    <dimen name="nav_icon_size">24dp</dimen>
+    <dimen name="nav_text_size">10sp</dimen>
+    <dimen name="nav_text_margin_top">2dp</dimen>
+    <dimen name="bottom_app_bar_height">49dp</dimen>
+</resources>

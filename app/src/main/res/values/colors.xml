@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- الألوان الأساسية من Material Design 3 للوضع النهاري -->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    
+    <!-- ألوان Material Design للوضع النهاري -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- ألوان التنقل للوضع النهاري -->
+    <color name="nav_icon_normal">#FF757575</color>
+    <color name="nav_text_normal">#FF757575</color>
+    <color name="nav_icon_selected">#FF6200EE</color>
+    <color name="nav_text_selected">#FF6200EE</color>
+    <color name="nav_icon_pressed">#FF64B5F6</color>
+    <color name="nav_text_pressed">#FF64B5F6</color>
+    
+    <!-- ✅ الألوان الأساسية للتطبيق للوضع النهاري -->
+    <color name="primary_color">#6200EE</color>
+    <color name="primary_variant_color">#3700B3</color>
+    <color name="secondary_color">#03DAC5</color>
+    <color name="secondary_variant_color">#018786</color>
+    
+    <!-- ✅ إصلاح: تغيير الخلفيات إلى ألوان فاتحة -->
+    <color name="background">#FFFFFFFF</color>
+    <color name="surface">#FFFFFFFF</color>
+    <color name="text_primary">#FF000000</color>
+    <color name="text_secondary">#FF666666</color>
+    
+    <!-- اللون الأخضر لزر المعاينة -->
+    <color name="green">#FF4CAF50</color>
+    
+    <!-- اللون الأزرق المضاف -->
+    <color name="blue">#FF2196F3</color>
+    <color name="blue_light">#FF64B5F6</color>
+    <color name="blue_dark">#FF1976D2</color>
+    
+    <!-- ✅ الألوان الإضافية المطلوبة للوضع النهاري -->
+    <color name="surface_variant">#FFEEEEEE</color>
+    <color name="outline">#FFCCCCCC</color>
+    <color name="primary_container">#FFE0E0E0</color>
+    <color name="on_primary_container">#FF000000</color>
+    
+    <!-- ألوان إضافية لـ Material Design 3 -->
+    <color name="on_primary">#FFFFFFFF</color>
+    <color name="on_secondary">#FF000000</color>
+    <color name="on_background">#FF000000</color>
+    <color name="on_surface">#FF000000</color>
+    <color name="on_error">#FFFFFFFF</color>
+    <color name="error">#FFB00020</color>
+    <color name="error_container">#FFB00020</color>
+    <color name="on_error_container">#FFFFFFFF</color>
+    <color name="secondary_container">#FF03DAC5</color>
+    <color name="on_secondary_container">#FF000000</color>
+    <color name="tertiary">#FF03DAC5</color>
+    <color name="on_tertiary">#FF000000</color>
+    <color name="tertiary_container">#FF03DAC5</color>
+    <color name="on_tertiary_container">#FF000000</color>
+    <color name="surface_inverse">#FF121212</color>
+    <color name="on_surface_inverse">#FFFFFFFF</color>
+    <color name="surface_bright">#FFFFFFFF</color>
+    <color name="surface_dim">#FFE0E0E0</color>
+    <color name="surface_container">#FFEEEEEE</color>
+    <color name="surface_container_low">#FFE0E0E0</color>
+    <color name="surface_container_high">#FFCCCCCC</color>
+    <color name="surface_container_highest">#FFAAAAAA</color>
+    <color name="on_surface_variant">#FF666666</color>
+    <color name="scrim">#80000000</color>
+    <color name="shadow">#80000000</color>
+    
+    <!-- ✅ ألوان جديدة مطلوبة للزر العائم -->
+    <color name="fab_ripple_color">#1AFFFFFF</color>
+    <color name="fab_shadow_color">#33000000</color>
+    
+    <!-- ألوان للوضع الليلي (للتوافق المستقبلي) -->
+    <color name="background_night">#FF121212</color>
+    <color name="surface_night">#FF1E1E1E</color>
+    <color name="nav_icon_normal_night">#FFAAAAAA</color>
+    <color name="nav_text_normal_night">#FFAAAAAA</color>
+    <color name="nav_icon_selected_night">#FFBB86FC</color>
+    <color name="nav_text_selected_night">#FFBB86FC</color>
+</resources>

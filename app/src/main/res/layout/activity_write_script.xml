@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_height="match_parent"
+	android:layout_width="match_parent"
+	android:background="?attr/colorSurface"
+	android:orientation="vertical">
+
+	<com.google.android.material.appbar.MaterialToolbar
+		android:layout_height="?attr/actionBarSize"
+		android:layout_width="match_parent"
+		android:background="?attr/colorPrimary"
+		app:title="كتابة النص مباشرة"
+		app:titleTextColor="@android:color/white"
+		app:navigationIcon="@drawable/ic_arrow_back"
+		android:id="@+id/toolbar"/>
+
+	<ScrollView
+		android:layout_height="0dp"
+		android:layout_width="match_parent"
+		android:fillViewport="true"
+		android:padding="16dp"
+		android:layout_weight="1">
+
+		<LinearLayout
+			android:layout_height="wrap_content"
+			android:layout_width="match_parent"
+			android:orientation="vertical">
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginBottom="16dp"
+				app:cardElevation="4dp"
+				app:cardCornerRadius="12dp">
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:padding="16dp"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:layout_marginBottom="8dp"
+						android:textSize="16sp"
+						android:textColor="?attr/colorPrimary"
+						android:text="اختر لغة الدبلجة"
+						android:textStyle="bold"/>
+
+					<Spinner
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:padding="12dp"
+						android:id="@+id/spinner_language"/>
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				android:layout_marginBottom="16dp"
+				app:cardElevation="4dp"
+				app:cardCornerRadius="12dp">
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:padding="16dp"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:layout_marginBottom="8dp"
+						android:textSize="18sp"
+						android:textColor="?attr/colorPrimary"
+						android:text="اكتب سيناريو الدبلجة"
+						android:textStyle="bold"/>
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:layout_marginBottom="16dp"
+						android:textSize="14sp"
+						android:textColor="?android:attr/textColorSecondary"
+						android:text="استخدم * لبدء كل مقطع جديد. سيتم إنشاء بطاقات منفصلة تلقائياً."/>
+
+					<EditText
+						android:layout_height="400dp"
+						android:layout_width="match_parent"
+						android:padding="16dp"
+						android:textIsSelectable="true"
+						android:scrollbars="vertical"
+						android:gravity="top|start"
+						android:background="@drawable/edit_text_background"
+						android:hint="اكتب أو الصق السيناريو هنا... مثال: * مرحباً بك في استوديو الدبلجة * هذا هو المقطع الثاني * يمكنك إضافة مقاطع جديدة باستخدام *"
+						android:textAlignment="viewStart"
+						android:textDirection="locale"
+						android:longClickable="true"
+						android:inputType="textMultiLine|textCapSentences"
+						android:id="@+id/et_script"/>
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_height="wrap_content"
+				android:layout_width="match_parent"
+				app:cardElevation="2dp"
+				app:cardBackgroundColor="?attr/colorPrimaryContainer"
+				app:cardCornerRadius="8dp">
+
+				<LinearLayout
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:padding="12dp"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:layout_marginBottom="4dp"
+						android:textSize="14sp"
+						android:textColor="?attr/colorPrimary"
+						android:text="💡 نصائح سريعة"
+						android:textStyle="bold"/>
+
+					<TextView
+						android:layout_height="wrap_content"
+						android:layout_width="match_parent"
+						android:textSize="12sp"
+						android:textColor="?android:attr/textColorSecondary"
+						android:lineSpacingExtra="4dp"
+						android:text="• استخدم * لبدء كل مقطع جديد\n• اضغط على إضافة فاصل لإدراج * تلقائياً\n• يمكنك تحديد النص ونسخه ولصقه"/>
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:gravity="center_vertical"
+		android:background="?attr/colorSurfaceVariant"
+		android:padding="16dp"
+		android:orientation="horizontal"
+		android:id="@+id/bottom_buttons_layout">
+
+		<com.google.android.material.button.MaterialButton
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			app:icon="@drawable/ic_add"
+			android:layout_marginEnd="8dp"
+			style="@style/Widget.Material3.Button.OutlinedButton"
+			android:id="@+id/btn_add_speaker_break"
+			android:text="＊ إضافة فاصل"/>
+
+		<View
+			android:layout_height="0dp"
+			android:layout_width="0dp"
+			android:layout_weight="1"/>
+
+		<com.google.android.material.button.MaterialButton
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			app:icon="@drawable/ic_arrow_forward"
+			style="@style/Widget.Material3.Button"
+			android:id="@+id/btn_continue_to_dubbing"
+			android:text="متابعة (0 كلمة)"/>
+
+	</LinearLayout>
+
+</LinearLayout>

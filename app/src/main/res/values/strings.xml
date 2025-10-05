@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- النصوص الحالية -->
+    <string name="app_name">استوديو الدبلجة</string>
+    <string name="speed_label">السرعة:</string>
+    <string name="pitch_label">حدة الصوت:</string>
+    <string name="play">تشغيل</string>
+    <string name="pause">إيقاف</string>
+    <string name="export">تصدير</string>
+    <string name="exporting">جاري التصدير…</string>
+    <string name="card_counter">البطاقة %1$d من %2$d</string>
+    <string name="select_voice">اختر صوتاً</string>
+    <string name="default_speed">1.0x</string>
+    <string name="default_pitch">1.0</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="title_srt_import">استيراد ملف SRT</string>
+    <string name="voice_settings_category">إعدادات الصوت</string>
+    <string name="export_settings_category">إعدادات التصدير</string>
+    <string name="general_settings_category">عام</string>
+    <string name="voice_engine_title">محرك الصوت</string>
+    <string name="voice_engine_summary">اختر محرك تحويل النص إلى صوت</string>
+    <string name="default_language_title">اللغة الافتراضية</string>
+    <string name="default_language_summary">اختر لغة الدبلجة الافتراضية</string>
+    <string name="export_format_title">صيغة التصدير</string>
+    <string name="export_format_summary">اختر صيغة الملف النهائي</string>
+    <string name="audio_quality_title">جودة الصوت</string>
+    <string name="audio_quality_summary">اضبط جودة الصوت النهائي</string>
+    <string name="dark_mode_title">الوضع الليلي</string>
+    <string name="dark_mode_summary">تفعيل الوضع المظلم</string>
+    <string name="storage_management_title">إدارة التخزين</string>
+    <string name="storage_management_summary">إدارة المساحة المستخدمة</string>
+    <string name="about_title">حول التطبيق</string>
+    <string name="about_summary">إصدار 1.0.0</string>
+    
+    
+    <string name="select_language">اختر اللغة</string>
+    <string name="language_arabic">العربية</string>
+    <string name="language_english">English</string>
+    <string name="language_french">Français</string>
+    <string name="language_spanish">Español</string>
+    <string name="auto_calculate_timing">حساب تلقائي</string>
+    <string name="manual_timing">توقيت يدوي</string>
+    
+    <string-array name="audio_formats">
+        <item>MP3</item>
+        <item>WAV</item>
+    </string-array>
+    
+    <string-array name="audio_format_values">
+        <item>mp3</item>
+        <item>wav</item>
+    </string-array>
+</resources>

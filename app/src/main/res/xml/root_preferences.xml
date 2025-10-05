@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<PreferenceCategory
+		android:title="إعدادات الصوت"
+		app:title="إعدادات الصوت">
+
+		<ListPreference
+			android:key="pref_voice_engine"
+			android:title="محرك الصوت"
+			android:summary="اختر محرك تحويل النص إلى صوت"
+			android:defaultValue="google_tts"
+			app:entries="@array/voice_engines"
+			app:entryValues="@array/voice_engine_values"/>
+
+		<ListPreference
+			android:key="pref_default_language"
+			android:title="اللغة الافتراضية"
+			android:summary="اختر لغة الدبلجة الافتراضية"
+			android:defaultValue="ar"
+			app:entries="@array/supported_languages"
+			app:entryValues="@array/language_values"/>
+
+		<ListPreference
+			android:key="pref_voice_speed"
+			android:title="سرعة الصوت الافتراضية"
+			android:summary="اضبط سرعة الصوت الافتراضية"
+			android:defaultValue="1.0"
+			app:entries="@array/speed_options"
+			app:entryValues="@array/speed_values"/>
+
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="إعدادات التصدير"
+		app:title="إعدادات التصدير">
+
+		<ListPreference
+			android:key="pref_export_format"
+			android:title="صيغة التصدير"
+			android:summary="اختر صيغة الملف النهائي"
+			android:defaultValue="mp3"
+			app:entries="@array/export_formats"
+			app:entryValues="@array/export_format_values"/>
+
+		<ListPreference
+			android:key="pref_audio_quality"
+			android:title="جودة الصوت"
+			android:summary="اضبط جودة الصوت النهائي"
+			android:defaultValue="192"
+			app:entries="@array/quality_options"
+			app:entryValues="@array/quality_values"/>
+
+		<SwitchPreferenceCompat
+			android:key="pref_keep_original_audio"
+			android:title="الحفاظ على الصوت الأصلي"
+			android:summary="الإبقاء على المسار الصوتي الأصلي في الفيديو"
+			android:defaultValue="false"/>
+
+	</PreferenceCategory>
+
+	<PreferenceCategory
+		android:title="عام"
+		app:title="عام">
+
+		<SwitchPreferenceCompat
+			android:key="pref_dark_mode"
+			android:title="الوضع الليلي"
+			android:summary="تفعيل الوضع المظلم"
+			android:defaultValue="false"/>
+
+		<Preference
+			android:key="pref_storage_management"
+			android:title="إدارة التخزين"
+			android:summary="عرض وإدارة المساحة المستخدمة"/>
+
+		<Preference
+			android:key="pref_clear_cache"
+			android:title="مسح الذاكرة المؤقتة"
+			android:summary="حذف الملفات المؤقتة"/>
+
+		<Preference
+			android:key="pref_about"
+			android:title="حول التطبيق"
+			android:summary="إصدار 1.0.0 - استوديو الدبلجة"/>
+
+	</PreferenceCategory>
+
+</PreferenceScreen>

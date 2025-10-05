@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="كيف تريد أن تبدأ مشروعك؟"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- ✅ استخدام Button عادي إذا كان MaterialButton يسبب مشاكل -->
+    <Button
+        android:id="@+id/btn_write_script"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="📝 كتابة نص مباشرة"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_import_srt_option"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="📂 استيراد ملف SRT"/>
+
+</LinearLayout>

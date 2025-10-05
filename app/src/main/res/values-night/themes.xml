@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Dubbingstudio" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_variant_color</item>
+        <item name="colorSecondary">@color/secondary_color</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant_color</item>
+        
+        <!-- ✅ استخدام ألوان الوضع الليلي -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        
+        <!-- ✅ إضافة الألوان المطلوبة -->
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+        
+        <!-- إضافة تنسيقات للبطاقات والأزرار -->
+        <item name="cardViewStyle">@style/CardViewStyle</item>
+        <item name="materialButtonStyle">@style/ButtonStyle</item>
+        
+        <!-- ✅ إضافة ألوان إضافية لضمان التوافق -->
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorOnError">@color/on_error</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorErrorContainer">@color/error_container</item>
+        <item name="colorOnErrorContainer">@color/on_error_container</item>
+        
+        <!-- ✅ إضافة تنسيقات إضافية -->
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
+        
+        <!-- ✅ إضافة تنسيقات للزر العائم -->
+        <item name="floatingActionButtonStyle">@style/FabStyle</item>
+    </style>
+
+    <style name="Theme.Dubbingstudio" parent="Base.Theme.Dubbingstudio" />
+    
+    <style name="CardViewStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">16dp</item>
+        <!-- ✅ إضافة لون خلفية البطاقة للوضع الليلي -->
+        <item name="cardBackgroundColor">@color/surface</item>
+    </style>
+    
+    <style name="ButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">12dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="backgroundTint">@color/primary_color</item>
+    </style>
+    
+    <style name="FabStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/primary_color</item>
+        <item name="tint">@color/white</item>
+        <item name="rippleColor">@color/fab_ripple_color</item>
+        <item name="elevation">8dp</item>
+    </style>
+    
+    <style name="ShapeAppearanceOverlay.Circle" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>
